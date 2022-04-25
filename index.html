@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Product App</title>
+    <!-- Bootswatch Cosmo Theme -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="App.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#" style="color:rgb(10, 218, 255)">PRODUCT 2.0</a>
+      <div>
+        <img src="https://i.pinimg.com/550x/90/25/57/9025576bc65d3395157e05b987eea548.jpg" alt="TechNews Logo" class="img">
+      </div>
+    </nav>
+    <div class="container">
+      <!-- APPLICATION -->
+      <div id="App" class="row pt-5">
+        <!-- FORM -->
+        <div class="col-md-4">
+          <div class="card">
+            
+            <form id="product-form" class="card-body">
+                <h5 style="color: aqua;">Ingresa el nombre del producto</h5>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Product Name"
+                  class="form-control"
+                />
+              </div>
+              <h5 style="color: aqua;">Ingresa el precio</h5>
+              <div class="form-group">
+                <input
+                  type="number"
+                  id="price"
+                  step="0.01"
+                  placeholder="Product Price"
+                  class="form-control"
+                />
+              </div>
+              <h5 style="color: aqua;">Ingresa la fecha</h5>
+              <div class="form-group">
+                <input
+                  type="number"
+                  id="year"
+                  min="1900"
+                  max="2099"
+                  step="1"
+                  value="2018"
+                  class="form-control"
+                />
+              </div>
+              <h5 style="color: aqua;">Ingresa la Categoria</h5>
+              <div class="form-group">
+                <select style="width: 100%;" class="form-group" class="form-select" id="categoria" aria-label="Default select example">
+                  <option selected>Categoria</option>
+                  <option value="Hogar">Hogar</option>
+                  <option value="Uso personal">Uso personal</option>
+                  <option value="Otros">Otros</option>
+                </select>
+              </div>
+              
+              <input
+                type="submit"; style="color:rgb(255, 255, 255)"
+                value="Guardar"
+                class="btn btn-primary btn-block"
+              />
+            </form>
+          </div>
+        </div>
+        
+          
+        <!-- PRODUCTS LIST -->
+        <div id="product-list" class="col-md-8"></div>
+      </div>
+    </div>
+
+    <script src="App.js" type="module"></script>
+      
+  </body>
+</html>
